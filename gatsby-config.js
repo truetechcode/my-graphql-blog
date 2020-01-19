@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `TrueTech Information System`,
+    title: `TrueTech`,
     author: "Terver Aosu",
     description: "A collection of my thoughts and writings.",
     siteUrl: "https://amberley.blog/",
@@ -26,9 +26,16 @@ module.exports = {
         - mdx defaults to `true`
         */
         basePath: `/blog`,
-        contentPath: `content/blogPosts`,
-        assetPath: `content/blogAssets`,
-        mdx: false,
+        contentPath: `src/content/blogPosts`,
+        assetPath: `src/content/blogAssets`,
+        mdx: true,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `content`,
+        path: `${__dirname}/src/content/`,
       },
     },
     {
